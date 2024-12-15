@@ -32,7 +32,7 @@ Esta é a página inicial do site da Argus, uma empresa especializada em soluç�
 - **Open Graph**:
   - `og:title`: Argus - Pavimentação e Soluções de Infraestrutura
   - `og:description`: Descubra nossos serviços de pavimentação e infraestrutura.
-  - `og:image`: ./branding/icone-verde-transparente.png
+  - `og:image`: ./source/images/branding/icone-verde-transparente.png
   - `og:url`: https://www.arguspav.com
 - **Twitter Card**: summary_large_image
 
