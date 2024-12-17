@@ -102,19 +102,9 @@ header {
     background-repeat: no-repeat;
     background-position: left;
     opacity: 1;
-    animation: slide 4s infinite; /* Adiciona animação para alternar imagens */
+    animation: slide 4s infinite;
 }
 
-/* Keyframes para animação de slide */
-@keyframes slide {
-    0% { background-position: left; }  /* Início no lado esquerdo */
-    25% { background-position: center; }  /* Movendo para o centro */
-    50% { background-position: right; }  /* Movendo para o lado direito */
-    75% { background-position: center; }  /* Retorna ao centro */
-    100% { background-position: left; }  /* Retorna ao início */
-}
-
-/* Classes das imagens */
 .img1 {
     background-image: url('../images/others/Imagem1.jpg');
     background-position: top;
