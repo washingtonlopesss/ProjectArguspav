@@ -1,3 +1,18 @@
+let indexNow = 0
+const images = ['img1', 'img2', 'img3', 'img4']
+
+function showImages() {
+    const imgNow = document.getElementById('img-home');
+
+    imgNow.classList.remove(images[indexNow]);
+
+    indexNow = (indexNow + 1) % images.length;
+
+    imgNow.classList.add(images[indexNow]);
+}
+
+setInterval(showImages, 4000)
+
 function toggleAccordion(accordion) {
     const body = accordion.querySelector('.accordion-body')
     const arrow = accordion.querySelector('.icon-arrow')
