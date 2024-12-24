@@ -1,5 +1,9 @@
 function htmlContentContact(formDataValues) {
 
+    const formatarQuebrasDeLinha = (texto) => {
+        return texto.replace(/\n/g, '<br>');
+    }
+
     const email = `
         <!DOCTYPE html>
         <html lang="pt-br">
@@ -82,7 +86,7 @@ function htmlContentContact(formDataValues) {
                     </tr>
                     <tr class="ult">
                         <td><strong>Mensagem:</strong></td>
-                        <td>${formDataValues.mensagem}</td>
+                        <td>${formatarQuebrasDeLinha(formDataValues.mensagem)}</td>
                     </tr>
                 </table>
                 <div class="footer">

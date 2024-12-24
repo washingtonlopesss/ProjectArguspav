@@ -213,3 +213,26 @@ function menuToggle() {
     close.classList.toggle('icon-close-active')
     menu.classList.toggle('mobile-list')
 }
+
+function mascaraTelefone(input) {
+    var valor = input.value;
+    valor = valor.replace(/\D/g, '')
+    valor = valor.replace(/^(\d{2})(\d)/, '($1) $2')
+    valor = valor.replace(/(\d{5})(\d{1})/, '$1-$2')
+    input.value = valor
+}
+
+function definirDataMaxima() {
+    var dataNascimento = new Date()
+    dataNascimento.setFullYear(dataNascimento.getFullYear() - 14) // Idade minima igual a 14 anos
+
+    var dia = String(dataNascimento.getDate()).padStart(2, '0')
+    var mes = String(dataNascimento.getMonth() + 1).padStart(2, '0')
+    var ano = dataNascimento.getFullYear()
+
+    var dataFormatada = ano + '-' + mes + '-' + dia
+
+    document.getElementById('data_nascimento_trabalho').setAttribute('max', dataFormatada)
+}
+
+window.onload = definirDataMaxima

@@ -3,6 +3,10 @@ function htmlContentWorks(formDataValues) {
     const _dataNascimento = new Date(formDataValues.dataNascimento)
     const dataNascimentoFormat = _dataNascimento.toLocaleDateString("pt-BR");
 
+    const formatarQuebrasDeLinha = (texto) => {
+        return texto.replace(/\n/g, '<br>');
+    }
+
     const email = `
         <!DOCTYPE html>
         <html lang="pt-br">
@@ -31,6 +35,11 @@ function htmlContentWorks(formDataValues) {
                 }
                 p {
                     line-height: 1.6;
+                }
+                .parag {
+                    all: unset;
+                    margin: 0;
+                    padding: 0;
                 }
                 tr {
                     border: 2px solid #54694a;
@@ -97,15 +106,15 @@ function htmlContentWorks(formDataValues) {
                     </tr>
                     <tr>
                         <td><strong>Resumo das Qualificações:</strong></td>
-                        <td>${formDataValues.qualificacoes}</td>
+                        <td><p class="parag">${formatarQuebrasDeLinha(formDataValues.qualificacoes)}</p></td>
                     </tr>
                     <tr>
                         <td><strong>Resumo de Experiências:</strong></td>
-                        <td>${formDataValues.experiencias}</td>
+                        <td><p class="parag">${formatarQuebrasDeLinha(formDataValues.experiencias)}</p></td>
                     </tr>
                     <tr class="ult">
                         <td><strong>Outras Observações:</strong></td>
-                        <td>${formDataValues.observacoes}</td>
+                        <td><p class="parag">${formatarQuebrasDeLinha(formDataValues.observacoes)}</p></td>
                     </tr>
                 </table>
                 <div class="footer">
@@ -116,5 +125,6 @@ function htmlContentWorks(formDataValues) {
         </body>
         </html>
     `
+
     return email
 }
