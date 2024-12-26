@@ -31,7 +31,7 @@ document.getElementById('form-contato').addEventListener('submit', async (event)
     const contentHTML = htmlContentContact(formDataValues)
 
     const formData = new FormData()
-    formData.append("to", "washington.lopes@nwadv.com.br")
+    formData.append("to", "contato@arguspav.com")
     formData.append("subject", "CONTATO VIA WEBSITE")
     formData.append("html", contentHTML)
 
@@ -71,7 +71,7 @@ document.getElementById('form-orcamento').addEventListener('submit', async (even
     const contentHTML = htmlContentBudget(formDataValues)
 
     const formData = new FormData()
-    formData.append("to", "washington.lopes@nwadv.com.br")
+    formData.append("to", "contato@arguspav.com")
     formData.append("subject", "SOLICITAÇÃO DE ORÇAMENTO")
     formData.append("html", contentHTML)
 
@@ -108,7 +108,7 @@ document.getElementById('form-locacao').addEventListener('submit', async (event)
     const contentHTML = htmlContentRental(formDataValues)
 
     const formData = new FormData()
-    formData.append("to", "washington.lopes@nwadv.com.br")
+    formData.append("to", "contato@arguspav.com")
     formData.append("subject", "LOCAÇÃO DE EQUIPAMENTOS")
     formData.append("html", contentHTML)
 
@@ -151,7 +151,7 @@ document.getElementById('form-trabalhe-conosco').addEventListener('submit', asyn
     const contentHTML = htmlContentWorks(formDataValues)
 
     const formData = new FormData()
-    formData.append("to", "washington.lopes@nwadv.com.br");
+    formData.append("to", "contato@arguspav.com");
     formData.append("subject", "TRABALHE CONOSCO");
     formData.append("html", contentHTML);
 
