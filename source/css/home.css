@@ -109,11 +109,6 @@ header {
     background-position: top;
 }
 
-.img2 {
-    background-image: url('../images/others/Imagem2.jpg');
-    background-position: top;
-}
-
 .img3 {
     background-image: url('../images/others/Imagem3.jpg');
     background-position: center;
@@ -565,7 +560,7 @@ footer {
 
 .footer-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     max-width: 1500px;
     margin: 50px auto;
     padding: 0;
@@ -581,10 +576,12 @@ footer {
     width: 200px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .footer-logo > img {
-    max-width: 160px;
+    height: clamp(100px, 10vw, 110px);
+    
 }
 
 .footer-nav {
@@ -607,7 +604,7 @@ footer {
 
 .footer-contact ul li {
     font-size: 20px;
-    margin: 5px 0;
+    margin: 10px 0;
     font-family: Nexa;
 }
 
@@ -746,7 +743,6 @@ footer {
     .footer-logo > img {
         display: block;
         margin: 0 auto;
-        width: 120px;
     }
 
     .footer-logo {

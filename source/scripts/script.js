@@ -1,5 +1,5 @@
 let indexNow = 0
-const images = ['img1', 'img2', 'img3', 'img4']
+const images = ['img1', 'img3', 'img4']
 
 function showImages() {
     const imgNow = document.getElementById('img-home');
